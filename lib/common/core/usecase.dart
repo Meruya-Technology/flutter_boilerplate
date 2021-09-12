@@ -12,7 +12,5 @@ abstract class UseCase<O, I> {
     });
   }
 
-  // Make this empty body so that use case that doesn't need this callback
-  // doesn't have to override
   void onError(dynamic error) {}
 }
