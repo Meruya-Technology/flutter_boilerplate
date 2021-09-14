@@ -19,9 +19,61 @@ class ExamplePage extends StatelessWidget {
             title: Text('Example'),
           ),
           body: Consumer<ExampleProvider>(
-            builder: (context, provider, child) => ExampleWidget(
-              counter: provider.counter,
-              onCounterTap: provider.count,
+            builder: (context, provider, child) => Column(
+              children: [
+                ExampleWidget(
+                  counter: provider.counter,
+                  onCounterTap: provider.count,
+                ),
+                Divider(height: 0),
+                Padding(
+                  padding: EdgeInsets.all(24),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                    children: [
+                      Text('Isolate'),
+                      Text('Status : ${provider.isolateStatus}'),
+                      Text('Stream Content'),
+                      StreamBuilder(
+                        stream: provider.stream,
+                        builder: (context, snapshot) {
+                          switch (snapshot.connectionState) {
+                            case ConnectionState.waiting:
+                              return Center(
+                                child: CircularProgressIndicator(),
+                              );
+                            case ConnectionState.active:
+                              if (snapshot.hasData) {
+                                return Text(snapshot.data.toString());
+                              } else {
+                                return SizedBox.shrink();
+                              }
+                            default:
+                              return SizedBox.shrink();
+                          }
+                        },
+                      ),
+                      ButtonBar(
+                        children: [
+                          MaterialButton(
+                            child: Text('Start'),
+                            color: Colors.blue,
+                            textColor: Colors.white,
+                            elevation: 0,
+                            onPressed: provider.startIsolate,
+                          ),
+                          MaterialButton(
+                            child: Text('Stop'),
+                            color: Colors.red,
+                            elevation: 0,
+                            onPressed: provider.stopIsolate,
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ),
+              ],
             ),
           ),
         );
