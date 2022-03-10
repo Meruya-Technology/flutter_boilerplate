@@ -1,6 +1,11 @@
 # flutter_boilerplate
 
-A new Flutter project.
+Flutter boilerplate created using : 
+1. DDD (Domain Driven Design) Architecture
+2. Centralized Theme
+3. Centralized Error handling
+4. Advanced Provider state management
+5. Multiple build profile, using dart define, flavor for (package segregation)
 
 ## Getting Started
 

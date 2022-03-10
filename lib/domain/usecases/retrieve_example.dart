@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/common/core/error_handler.dart';
-import 'package:flutter_boilerplate/common/core/usecase.dart';
+import 'package:flutter_boilerplate/common/core/use_case.dart';
 import 'package:flutter_boilerplate/domain/entities/example.dart';
 import 'package:flutter_boilerplate/domain/repositories/example_repository.dart';
 
