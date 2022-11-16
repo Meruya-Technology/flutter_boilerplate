@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_boilerplate/common/utils/apps_flyer_util.dart';
 import 'package:flutter_boilerplate/common/utils/route_util.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  final appsflyerUtil = AppsFlyerUtil.initialization();
+  AppsFlyerUtil.listenDeeplink(appsflyerUtil);
   runApp(FlutterApp());
 }
 

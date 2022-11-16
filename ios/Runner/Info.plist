@@ -41,5 +41,11 @@
 	</array>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
+    <key>CFBundleURLName</key>
+    <string>meruyatechnology.com</string>
+    <key>CFBundleURLSchemes</key>
+    <array>
+    <string>boilerplate</string>
+    </array>
 </dict>
 </plist>

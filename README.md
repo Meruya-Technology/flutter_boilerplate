@@ -22,3 +22,6 @@ Thats it !
  
 ## Contributors
 [<img src="https://contrib.rocks/image?repo=Meruya-Techhnology/flutter_boilerplate" />](https://github.com/Meruya-Techhnology/flutter_boilerplate/graphs/contributors)
+
+## Keys
+- AppsFlyer key : `8dGawcEXces2DLrEdZpuPV`
